@@ -1,6 +1,6 @@
 {
   "name": "isomorphic-react-flux-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for Isomorphic React/Flux project with live editing",
   "scripts": {
     "dev": "NODE_ENV=development supervisor --harmony --ignore public/ server & NODE_ENV=development node --harmony hotLoad.js",
