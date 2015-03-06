@@ -1,5 +1,5 @@
 'use strict';
-var sass = require('!style!css!sass!./sass/style.scss');
+require('!style!raw!compass!./sass/style.scss');
 
 var React = require('react');
 var app = require('./scripts/app');

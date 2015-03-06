@@ -30,7 +30,8 @@
   "devDependencies": {
     "babel-loader": "^4.0.0",
     "react-hot-loader": "^1.1.1",
-    "sass-loader": "~0.4.1",
+    "compass-loader": "^0.0.4",
+    "raw-loader": "*",
     "style-loader": "*",
     "css-loader": "*",
     "webpack": "^1.5.1",

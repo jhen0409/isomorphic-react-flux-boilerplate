@@ -10,7 +10,7 @@ Boilerplate for Isomorphic React/Flux project with live editing. (server use [io
 npm install
 
 # fix node-sass in iojs(1.4.x) problem
-cd node_modules/sass-loader/node_modules/node-sass
+cd node_modules/compass-loader/node_modules/node-sass
 npm install
 ```
 
