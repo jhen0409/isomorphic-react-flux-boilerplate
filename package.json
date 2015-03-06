@@ -1,5 +1,5 @@
 {
-  "name": "isomorphic-react-boilerplate",
+  "name": "isomorphic-react-flux-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for Isomorphic React/Flux project with live editing",
   "scripts": {
