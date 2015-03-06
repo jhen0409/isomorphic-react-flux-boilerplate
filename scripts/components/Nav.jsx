@@ -7,9 +7,9 @@ var Nav = React.createClass({
   mixins: [StateMixin],
   render: function() {
     return (
-      <ul className="pure-menu pure-menu-open pure-menu-horizontal">
-        <li className={this.isActive('/') ? 'pure-menu-selected' : ''}><Link to='/'>Home</Link></li>
-        <li className={this.isActive('/about') ? 'pure-menu-selected' : ''}><Link to='/about'>About</Link></li>
+      <ul className="nav nav-pills">
+        <li className={this.isActive('/') ? 'active' : ''}><Link to='/'>Home</Link></li>
+        <li className={this.isActive('/about') ? 'active' : ''}><Link to='/about'>About</Link></li>
       </ul>
     );
   }
