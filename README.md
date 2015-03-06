@@ -1,6 +1,6 @@
 # isomorphic-react-boilerplate
 
-Boilerplate for Isomorphic React/Flux project with live editing. (Flux library use: [fluxible](https://github.com/yahoo/fluxible))
+Boilerplate for Isomorphic React/Flux project with live editing. (server use [iojs](https://github.com/iojs/io.js) & [koa](https://github.com/koajs/koa), Flux library use: [fluxible](https://github.com/yahoo/fluxible))
 
 ### Install
 
@@ -26,4 +26,4 @@ npm start
 
 ### License
 
-MIT
+[MIT](LICENSE)
