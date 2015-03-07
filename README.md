@@ -20,7 +20,7 @@ npm install
 # development
 npm run dev
 
-# start
+# build & start production server
 npm run build
 npm start
 ```
