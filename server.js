@@ -34,8 +34,8 @@ server.use(function* () {
   var self = this;
   var html;
   yield function(done) {
-    Router.run(app.getAppComponent(), self.req.url, function (Handler, state) {
-      context.executeAction(navigateAction, state, function (err) {
+    Router.run(app.getAppComponent(), self.req.url, function(Handler, state) {
+      context.executeAction(navigateAction, state, function(err) {
         var exposed = 'window.App=' + serialize(app.dehydrate(context)) + ';';
 
         var buildPath;
