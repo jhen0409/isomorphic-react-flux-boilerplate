@@ -1,3 +1,4 @@
+'use strict';
 require("babel/register");
 
 var koa = require('koa');
@@ -41,10 +42,10 @@ server.use(function* () {
         var buildPath;
         if (process.env.NODE_ENV === "development") {
           var hotLoadPort = process.env.HOT_LOAD_PORT || 3030;
-          buildPath = 'http://localhost:' + hotLoadPort + '/js/client.js'
+          buildPath = 'http://localhost:' + hotLoadPort + '/js/client.js';
         }
         if (process.env.NODE_ENV === "production") {
-          buildPath = '/js/client.js'
+          buildPath = '/js/client.js';
         }
 
         var Component = React.createFactory(Handler);
