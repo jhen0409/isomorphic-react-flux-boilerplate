@@ -10,6 +10,9 @@ var Html = React.createClass({
           <title>{this.props.title}</title>
           <meta name="viewport" content="width=device-width, user-scalable=no" />
           <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+          <noscript>
+            <link rel="stylesheet" href="/css/style.css" />
+          </noscript>
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{__html: this.props.markup}}></div>

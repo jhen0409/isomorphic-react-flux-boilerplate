@@ -1,4 +1,5 @@
 node_modules
 npm-debug.log
 .DS_Store
-public/js/client.js
+public/
+.sass-cache

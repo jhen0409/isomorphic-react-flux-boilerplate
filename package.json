@@ -3,9 +3,15 @@
   "version": "1.0.1",
   "description": "Boilerplate for Isomorphic React/Flux project with live editing",
   "scripts": {
-    "dev": "NODE_ENV=development supervisor --harmony --ignore public/ server & NODE_ENV=development node --harmony hotLoad.js",
-    "build": "NODE_ENV=production webpack -p --progress --colors",
-    "start": "NODE_ENV=production node --harmony server"
+    "dev": "./node_modules/parallelshell/index.js 'npm run dev:server' 'npm run dev:hotload' 'npm run compass:watch'",
+    "build": "npm run clean & ./node_modules/parallelshell/index.js 'npm run webpack:build' 'npm run compass:compile'",
+    "start": "NODE_ENV=production node --harmony server",
+    "dev:server": "NODE_ENV=development supervisor --harmony --ignore public/ server",
+    "dev:hotload": "NODE_ENV=development node --harmony hotLoad.js",
+    "compass:compile": "compass compile --css-dir=public/css",
+    "compass:watch": "compass watch --css-dir=public/css",
+    "webpack:build": "NODE_ENV=production webpack -p --progress --colors",
+    "clean": "rm -rf public/"
   },
   "repository": {
     "type": "git",
@@ -35,7 +41,8 @@
     "style-loader": "*",
     "css-loader": "*",
     "webpack": "^1.5.1",
-    "webpack-dev-server": "1.6.4"
+    "webpack-dev-server": "1.6.4",
+    "parallelshell": "^1.0.4"
   },
   "dependencies": {
     "react": "^0.12.2",

@@ -1,14 +1,11 @@
 'use strict';
 
 var webpack = require('webpack');
-
 var port = process.env.HOT_LOAD_PORT || 3030;
 
-module.exports = {
+var config = {
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:' + port,
-    'webpack/hot/only-dev-server',
     './client'
   ],
   output: {
@@ -17,7 +14,6 @@ module.exports = {
     publicPath: 'http://localhost:' + port + '/js/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
@@ -30,3 +26,9 @@ module.exports = {
     ]
   }
 };
+if (process.env.NODE_ENV === 'development') {
+  config.entry.push('webpack-dev-server/client?http://localhost:' + port);
+  config.entry.push('webpack/hot/only-dev-server');
+  config.plugins.push(new webpack.HotModuleReplacementPlugin());
+}
+module.exports = config;
