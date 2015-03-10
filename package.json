@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Boilerplate for Isomorphic React/Flux project with live editing",
   "scripts": {
-    "dev": "./node_modules/parallelshell/index.js 'npm run dev:server' 'npm run dev:hotload' 'npm run compass:watch'",
+    "dev": "node node_modules/parallelshell/index.js 'npm run dev:server' 'npm run dev:hotload' 'npm run compass:watch'",
     "build": "npm run clean & ./node_modules/parallelshell/index.js 'npm run webpack:build' 'npm run compass:compile'",
     "start": "NODE_ENV=production node --harmony server",
     "dev:server": "NODE_ENV=development supervisor --harmony --ignore public/ server",
