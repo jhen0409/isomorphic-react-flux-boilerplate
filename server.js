@@ -34,7 +34,7 @@ server.use(function* () {
         }
 
         let Component = React.createFactory(Handler);
-        html = React.renderToStaticMarkup(HtmlComponent({
+        html = React.renderToStaticMarkup(htmlComponent({
           state: exposed,
           markup: React.renderToString(Component({context:context.getComponentContext()})),
           buildPath: buildPath || ''
