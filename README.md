@@ -8,7 +8,7 @@ Boilerplate for Isomorphic React/Flux project with live editing. (server use [io
 ```
 # required iojs-v2.x.x
 npm install
-npm install -g gulp supervisor
+npm install -g gulp babel
 
 # gem
 gem install compass sass

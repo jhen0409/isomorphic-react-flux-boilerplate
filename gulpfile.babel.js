@@ -7,10 +7,11 @@ import WebpackDevServer from 'webpack-dev-server';
 import webpackConfig from './webpack.config';
 import compass from 'gulp-compass';
 import minifyCSS from 'gulp-minify-css';
+import nodemon from 'gulp-nodemon';
 
 var port = process.env.HOT_LOAD_PORT || 3030;
 
-gulp.task('default', ['webpack-dev-server', 'compass:build', 'watch']);
+gulp.task('default', ['webpack-dev-server', 'compass:build', 'watch', 'start']);
 gulp.task('build', ['webpack:build', 'compass:build']);
 
 gulp.task('watch', function () {
@@ -47,4 +48,14 @@ gulp.task('webpack-dev-server', (callback) => {
     if (err) throw new gutil.PluginError('webpack-dev-server', err);
     gutil.log('[webpack-dev-server]', `http://localhost:${port}`);
   });
+});
+
+gulp.task('start', (callback) => {
+  nodemon({
+    exec: 'babel-node',
+    script: 'server.js',
+    ext: 'js',
+    ignore: 'public',
+    env: { 'NODE_ENV': process.env.NODE_ENV }
+  })
 });
