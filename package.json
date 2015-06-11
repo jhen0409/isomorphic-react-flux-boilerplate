@@ -36,30 +36,32 @@
   "devDependencies": {
     "babel-loader": "^4.0.0",
     "react-hot-loader": "^1.1.1",
-    "compass-loader": "^0.0.4",
     "raw-loader": "*",
     "style-loader": "*",
     "css-loader": "*",
     "webpack": "^1.5.1",
     "webpack-dev-server": "1.6.4",
-    "parallelshell": "^1.0.4"
+    "parallelshell": "^1.0.4",
+    "sass-loader": "^1.0.2",
+    "node-sass": "^3.1.2",
+    "compass-mixins": "^0.12.7"
   },
   "dependencies": {
-    "react": "^0.12.2",
-    "react-router": "^0.12.2",
-    "fluxible": "^0.2.5",
-    "flux-router-component": "^0.5.13",
-    "serialize-javascript": "^1.0.0",
-    "debug": "^2.0.0",
     "babel": "^4.6.3",
+    "debug": "^2.0.0",
+    "flux-router-component": "^0.5.13",
+    "fluxible": "^0.2.5",
     "koa": "^0.18.1",
+    "koa-bodyparser": "^1.4.0",
+    "koa-compress": "^1.0.8",
+    "koa-csrf": "^2.1.3",
+    "koa-favicon": "^1.2.0",
+    "koa-methodoverride": "^0.4.1",
     "koa-route": "^2.4.0",
     "koa-session": "^3.1.0",
     "koa-static": "^1.4.9",
-    "koa-favicon": "^1.2.0",
-    "koa-bodyparser": "^1.4.0",
-    "koa-methodoverride": "^0.4.1",
-    "koa-compress": "^1.0.8",
-    "koa-csrf": "^2.1.3"
+    "react": "^0.12.2",
+    "react-router": "^0.12.2",
+    "serialize-javascript": "^1.0.0"
   }
 }
