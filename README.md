@@ -6,11 +6,7 @@ Boilerplate for Isomorphic React/Flux project with live editing. (server use [io
 ### Install
 
 ```
-# required iojs or node(harmony)
-npm install
-
-# fix node-sass in iojs(1.4.x) problem
-cd node_modules/compass-loader/node_modules/node-sass
+# required iojs-v2.x.x
 npm install
 ```
 

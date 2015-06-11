@@ -11,7 +11,7 @@ var Html = React.createClass({
           <meta name="viewport" content="width=device-width, user-scalable=no" />
           <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
           <noscript>
-            <link rel="stylesheet" href="/css/style.css" />
+            <link rel="stylesheet" href="/css/style-noscript.css" />
           </noscript>
         </head>
         <body>
