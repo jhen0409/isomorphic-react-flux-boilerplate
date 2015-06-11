@@ -8,8 +8,8 @@
     "start": "NODE_ENV=production node --harmony server",
     "dev:server": "NODE_ENV=development supervisor --harmony --ignore public/ server",
     "dev:hotload": "NODE_ENV=development node --harmony hotLoad.js",
-    "compass:compile": "compass compile --css-dir=public/css",
-    "compass:watch": "compass watch --css-dir=public/css",
+    "compass:compile": "compass compile sass/style-noscript.scss --css-dir=public/css",
+    "compass:watch": "compass watch sass/style-noscript.scss --css-dir=public/css",
     "webpack:build": "NODE_ENV=production webpack -p --progress --colors",
     "clean": "rm -rf public/"
   },
