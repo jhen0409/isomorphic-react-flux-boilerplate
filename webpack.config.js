@@ -23,7 +23,7 @@ var config = {
   module: {
     loaders: [
       { test: /\.jsx?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
-      { test: /\.scss$/, loader: 'style-loader!raw-loader!sass-loader?includePaths[]=' + path.resolve(__dirname, '../node_modules') }
+      { test: /\.scss$/, loader: 'style-loader!raw-loader!sass-loader?includePaths[]=' + path.resolve(__dirname, 'node_modules') }
     ]
   }
 };

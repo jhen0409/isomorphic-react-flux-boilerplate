@@ -3,15 +3,10 @@
   "version": "1.0.2",
   "description": "Boilerplate for Isomorphic React/Flux project with live editing",
   "scripts": {
-    "dev": "node node_modules/parallelshell/index.js 'npm run dev:server' 'npm run dev:hotload' 'npm run compass:watch'",
-    "build": "npm run clean & ./node_modules/parallelshell/index.js 'npm run webpack:build' 'npm run compass:compile'",
-    "start": "NODE_ENV=production node --harmony server",
-    "dev:server": "NODE_ENV=development supervisor --harmony --ignore public/ server",
-    "dev:hotload": "NODE_ENV=development node --harmony hotLoad.js",
-    "compass:compile": "compass compile sass/style-noscript.scss --css-dir=public/css",
-    "compass:watch": "compass watch sass/style-noscript.scss --css-dir=public/css",
-    "webpack:build": "NODE_ENV=production webpack -p --progress --colors",
-    "clean": "rm -rf public/"
+    "dev": "NODE_ENV=development gulp & npm run dev:server",
+    "build": "NODE_ENV=production gulp build",
+    "start": "NODE_ENV=production iojs server",
+    "dev:server": "NODE_ENV=development supervisor --ignore public/ -x iojs server"
   },
   "repository": {
     "type": "git",
@@ -35,16 +30,20 @@
   "license": "MIT",
   "devDependencies": {
     "babel-loader": "^4.0.0",
-    "react-hot-loader": "^1.1.1",
-    "raw-loader": "*",
-    "style-loader": "*",
+    "compass-mixins": "^0.12.7",
     "css-loader": "*",
-    "webpack": "^1.5.1",
-    "webpack-dev-server": "1.6.4",
-    "parallelshell": "^1.0.4",
-    "sass-loader": "^1.0.2",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-util": "^3.0.5",
     "node-sass": "^3.1.2",
-    "compass-mixins": "^0.12.7"
+    "parallelshell": "^1.0.4",
+    "raw-loader": "*",
+    "react-hot-loader": "^1.1.1",
+    "sass-loader": "^1.0.2",
+    "style-loader": "*",
+    "webpack": "^1.5.1",
+    "webpack-dev-server": "1.6.4"
   },
   "dependencies": {
     "babel": "^4.6.3",
@@ -63,5 +62,8 @@
     "react": "^0.12.2",
     "react-router": "^0.12.2",
     "serialize-javascript": "^1.0.0"
+  },
+  "engines": {
+    "iojs": "^2.0.0"
   }
 }
