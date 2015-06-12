@@ -14,6 +14,6 @@ class Nav extends React.Component {
   }
 }
 
-reactMixin.onClass(Nav, State)
+reactMixin.onClass(Nav, State);
 
 export default Nav;

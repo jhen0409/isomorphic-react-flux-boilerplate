@@ -1,5 +1,6 @@
 # isomorphic-react-flux-boilerplate
 [![NPM version](https://badge.fury.io/js/isomorphic-react-flux-boilerplate.png)](https://www.npmjs.com/package/isomorphic-react-flux-boilerplate)
+[![Build Status](https://travis-ci.org/jhen0409/isomorphic-react-flux-boilerplate.svg?branch=try-travis)](https://travis-ci.org/jhen0409/isomorphic-react-flux-boilerplate)
 
 Boilerplate for Isomorphic React/Flux project with live editing. (server use [iojs](https://github.com/iojs/io.js) & [koa](https://github.com/koajs/koa), Flux library use: [fluxible](https://github.com/yahoo/fluxible))
 
