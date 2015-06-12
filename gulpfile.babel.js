@@ -54,7 +54,7 @@ gulp.task('start', (callback) => {
   nodemon({
     exec: 'babel-node',
     script: 'server.js',
-    ext: 'js',
+    ext: 'js jsx',
     ignore: 'public',
     env: { 'NODE_ENV': process.env.NODE_ENV }
   })
