@@ -1,19 +1,15 @@
 'use strict';
-var React = require('react');
-var Route = require('react-router').Route;
-var DefaultRoute = require('react-router').DefaultRoute;
-var NotFoundRoute = require('react-router').NotFoundRoute;
-var App = require('./App.jsx');
-var Home = require('./Home.jsx');
-var About = require('./About.jsx');
-var NotFound = require('./NotFound.jsx');
+import React from 'react';
+import { Route, DefaultRoute, NotFoundRoute } from 'react-router';
+import App from './App.jsx';
+import Home from './Home.jsx';
+import About from './About.jsx';
+import NotFound from './NotFound.jsx';
 
-var routes = (
+export default (
   <Route name="app" path="/" handler={App}>
     <Route name="about" handler={About}/>
     <DefaultRoute name="home" handler={Home}/>
     <NotFoundRoute handler={NotFound}/>
   </Route>
 );
-
-module.exports = routes;

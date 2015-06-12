@@ -1,11 +1,10 @@
 'use strict';
-var React = require('react');
-var Link = require('react-router').Link;
-var StateMixin = require('react-router').State;
+import React from 'react';
+import { State, Link } from 'react-router';
+import reactMixin from 'react-mixin';
 
-var Nav = React.createClass({
-  mixins: [StateMixin],
-  render: function() {
+class Nav extends React.Component {
+  render() {
     return (
       <ul className="nav nav-pills">
         <li className={this.isActive('/') ? 'active' : ''}><Link to='/'>Home</Link></li>
@@ -13,6 +12,8 @@ var Nav = React.createClass({
       </ul>
     );
   }
-});
+}
 
-module.exports = Nav;
+reactMixin.onClass(Nav, State)
+
+export default Nav;

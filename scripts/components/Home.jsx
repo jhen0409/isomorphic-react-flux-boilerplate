@@ -1,15 +1,12 @@
 'use strict';
-var React = require('react');
+import React from 'react';
 
-var Home = React.createClass({
-  getInitialState: function () {
-    return {};
-  },
-  render: function() {
+class Home extends React.Component {
+  render() {
     return (
       <h1>home</h1>
     );
   }
-});
+}
 
-module.exports = Home;
+export default Home;

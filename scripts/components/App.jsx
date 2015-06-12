@@ -1,24 +1,12 @@
 'use strict';
-var React = require('react');
-var Nav = require('./Nav.jsx');
-var ApplicationStore = require('../stores/ApplicationStore');
-var FluxibleMixin = require('fluxible').Mixin;
-var RouteHandler = require('react-router').RouteHandler;
+import React from 'react';
+import ApplicationStore from '../stores/ApplicationStore';
+import Nav from './Nav.jsx';
+import { RouteHandler } from 'react-router';
+import { connectToStores, provideContext } from 'fluxible/addons';
 
-var App = React.createClass({
-  mixins: [FluxibleMixin],
-  statics: {
-    storeListeners: [ApplicationStore]
-  },
-
-  getInitialState: function () {
-    return this.getStore(ApplicationStore).getState();
-  },
-  onChange: function () {
-    var state = this.getStore(ApplicationStore).getState();
-    this.setState(state);
-  },
-  render: function () {
+class App extends React.Component {
+  render() {
     return (
       <div>
         <Nav />
@@ -26,6 +14,10 @@ var App = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = App;
+App = provideContext(connectToStores(App, [ApplicationStore], (stores, props) => {
+  return stores.ApplicationStore.getState();
+}));
+
+export default App;

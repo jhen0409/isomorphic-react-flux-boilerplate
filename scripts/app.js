@@ -1,11 +1,11 @@
 'use strict';
-var Fluxible = require('fluxible');
+import Fluxible from 'fluxible';
+import App from './components/Routes.jsx';
+import ApplicationStore from './stores/ApplicationStore';
 
-var app = new Fluxible({
-  component: require('./components/Routes.jsx')
+const app = new Fluxible({
+  component: App,
+  stores: [ApplicationStore]
 });
 
-app.registerStore(require('./stores/ApplicationStore'));
-app.registerStore(require('./stores/PageStore'));
-
-module.exports = app;
+export default app;

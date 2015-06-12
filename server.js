@@ -20,7 +20,7 @@ server.use(function* () {
 
   let html;
   yield (done) => {
-    Router.run(app.getAppComponent(), this.req.url, function(Handler, state) {
+    Router.run(app.getComponent(), this.req.url, function(Handler, state) {
       context.executeAction(navigateAction, state, function(err) {
         let exposed = 'window.App=' + serialize(app.dehydrate(context)) + ';';
 

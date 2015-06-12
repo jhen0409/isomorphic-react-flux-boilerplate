@@ -1,7 +1,7 @@
 'use strict';
-var createStore = require('fluxible/utils/createStore');
+import { createStore } from 'fluxible/addons';
 
-var ApplicationStore = createStore({
+const ApplicationStore = createStore({
   storeName: 'ApplicationStore',
   handlers: {
     'CHANGE_ROUTE': 'handleNavigate'
@@ -9,7 +9,7 @@ var ApplicationStore = createStore({
   initialize: function() {
     this.currentRoute = null;
   },
-  handleNavigate: function (route) {
+  handleNavigate: function(route) {
     if (this.currentRoute && route.path === this.currentRoute.path) {
       return;
     }
@@ -29,4 +29,4 @@ var ApplicationStore = createStore({
   }
 });
 
-module.exports = ApplicationStore;
+export default ApplicationStore;

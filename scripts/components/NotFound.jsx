@@ -1,15 +1,12 @@
 'use strict';
-var React = require('react');
+import React from 'react';
 
-var NotFound = React.createClass({
-  getInitialState: function () {
-    return {};
-  },
-  render: function() {
+class NotFound extends React.Component {
+  render() {
     return (
       <h1>Not Found</h1>
     );
   }
-});
+}
 
-module.exports = NotFound;
+export default NotFound;
