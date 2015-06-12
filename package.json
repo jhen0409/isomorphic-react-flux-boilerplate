@@ -3,9 +3,9 @@
   "version": "1.0.2",
   "description": "Boilerplate for Isomorphic React/Flux project with live editing",
   "scripts": {
-    "dev": "NODE_ENV=development gulp",
-    "build": "NODE_ENV=production gulp build",
-    "start": "NODE_ENV=production babel-node server"
+    "dev": "NODE_ENV=development ./node_modules/gulp/bin/gulp.js",
+    "build": "NODE_ENV=production ./node_modules/gulp/bin/gulp.js build",
+    "start": "NODE_ENV=production ./node_modules/babel/bin/babel-node server"
   },
   "repository": {
     "type": "git",
